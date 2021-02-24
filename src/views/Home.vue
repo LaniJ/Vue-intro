@@ -11,8 +11,18 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      key: 0
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.key += 1
+    }, 5000);
+  },
   components: {
-    HelloWorld,
+    HelloWorld
   },
 };
 </script>
